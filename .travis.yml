@@ -1,10 +1,9 @@
 sudo: required
-cache:
-  npm: false
 services:
   - docker
 
 before_install:
+  - npm update -q
   - docker build -t antogcdev/docker-react -f Dockerfile.dev .
 
 script:  #script should return 0 to success
