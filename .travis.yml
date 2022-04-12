@@ -6,4 +6,4 @@ before_install:
   - docker build -t antogc/docker-react -f Dockerfile.dev .
 
 script:  #script should return 0 to success
-  - docker run antogc/docker-react npm run test -- --coverage
+  - docker run antogc/docker-react npm run test -- --watchAll=false
