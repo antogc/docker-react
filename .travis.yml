@@ -3,7 +3,6 @@ services:
   - docker
 
 before_install:
-  - npm install --save --legacy-peer-deps
   - docker build -t antogcdev/docker-react -f Dockerfile.dev .
 
 script:  #script should return 0 to success
