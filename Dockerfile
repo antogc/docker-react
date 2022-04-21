@@ -7,5 +7,6 @@ RUN npm run build
 
 FROM nginx
 ##copy the app into the nginx content
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 ## CMD ["start", "nginx"] already defined into nginx image
